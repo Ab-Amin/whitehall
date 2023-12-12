@@ -1,5 +1,120 @@
 
 
+.main-page{
+
+  main{
+
+    section{
+      margin-bottom: 50px;
+    }
+
+    section:nth-child(1){
+      
+      .bg-image{
+        width: 100%;
+        height: 60vh;
+        background: url(../img/hero-vines_1920x700_crop_center.jpg) center/cover;
+        filter: brightness(85%);
+        position: relative;
+
+        div{
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+        
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    section:nth-child(2){
+      text-align: center;
+
+      > div:not(.title-center){
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        text-align: left;
+        h3{
+          margin-top: 20px;
+        }
+        h3 a{
+          color: black;
+          text-decoration: underline;
+          text-underline-offset: 10px;
+        }
+      }
+    }
+
+    section:nth-child(3){
+      display: flex;
+      justify-content: space-between;
+      div:first-child{
+        width: 45%;
+        img{
+          width: 100%;
+        }
+      }
+
+      div:last-child{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        p{
+          width: 350px;
+        }
+        p:first-of-type{
+          color: gray;
+          text-transform: uppercase;
+          
+        }
+      }
+    }
+
+    section:nth-child(4){
+
+      > div:not(.title-center){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        text-align: center;
+        a img{
+          margin-bottom: 20px;
+        }
+        p{
+          width: 350px;
+          margin: 0 auto;
+          font-size: 13px;
+          
+        }
+        a{
+            font-size: 16px;
+            color: gray;
+          }
+          a:last-of-type::before{
+            content: ' | ';
+            color: black;
+            margin: 0 10px;
+          }
+      }
+    }
+
+
+
+
+
+
+
+  }
+}
+
+
 
 
 
