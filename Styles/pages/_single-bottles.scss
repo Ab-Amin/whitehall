@@ -1,0 +1,156 @@
+// ../img/theweine_500x_crop_center.png
+.single-bottle-page{
+  
+  section:nth-of-type(1){
+    background-color: rgb(245, 245, 245);
+    padding: 70px;
+    .mini-nav{
+      font-size: 12px;
+      margin-top: -35px;
+      a{
+        color: gray;
+        &::after{
+          content: ' > Single Bottles';
+        }
+      }
+    }
+    .title-center{
+      h2{
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 50px;
+        z-index: 2;
+        &::before{
+          content: ' ';
+          background: url(../img/10281361_2_92x.webp) no-repeat;
+          position:absolute;
+          top:-10px;
+          right:-65px;
+          z-index: 1;
+          height: 93px;
+          width: 92px;
+        }
+      }
+    }
+  }
+  
+  section:nth-of-type(2){
+    background-color: white;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding: 15px 0;
+    select{
+      width: 180px;
+      padding: 10px 15px 10px 0;
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      option{
+        font-size: 12px;
+      }
+    }
+    select:first-of-type{
+      margin-right: calc(100% - 370px);
+    }
+
+  }
+
+  section:nth-of-type(3){
+    display: grid;
+    grid-template-columns: repeat(4, 292px);
+    grid-template-rows: repeat(4, 330px);
+    gap: 2rem;
+    justify-content: center;
+    margin: 30px auto 50px;
+
+    > div:not(div:nth-of-type(5)){
+      border: 1px solid black; //------- to delete
+      width: 292px;
+      position: relative;
+      &:hover .displaynone{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: 1.5rem;
+        left: 50%;
+        white-space: nowrap;
+        transform: translateX(-50%);
+      }
+
+      .heart-like{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        background-color: rgb(243, 243, 243);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        margin: 10px 10px 0 0; 
+        .fa-heart{
+          color: black;
+          margin-top: 7px;
+        }
+      }
+
+      .image-shop{
+        border: 1px solid black; //------- to delete
+        position: relative;
+        div:last-child a{
+          padding: 15px 95px;
+        }      
+        
+      }
+      
+    }
+
+    > div:nth-of-type(5){
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+      position: relative;
+      .zoom{
+        img{
+          display: block;
+          width: calc(calc(2rem) + calc(292px*2)); // \(°o°)/
+          height: calc(330px*2 + 2rem);
+          transition: all .5s ease-out;
+        }
+      
+        .overlay-txt{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: white;
+          margin: 0 0 2rem 2rem;
+          h2{
+            text-transform: capitalize;
+            margin-bottom: 50px;
+            font-size: 40px;
+          }
+        }
+      
+      }
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
